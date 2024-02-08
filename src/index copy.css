@@ -33,15 +33,6 @@ body {
   align-items: start;
 }
 
-.sidebar ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-}
-
 .button {
   background-color: var(--color-medium);
   color: #343a40;
@@ -55,6 +46,15 @@ body {
 
 .button:hover {
   background-color: var(--color-dark);
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
 .sidebar li {
@@ -89,6 +89,11 @@ body {
   grid-column: 2;
 }
 
+.sidebar li .button {
+  grid-row: span 2;
+  grid-column: 3;
+}
+
 .sidebar > .button {
   float: right;
   margin-right: 1.2rem;
@@ -117,7 +122,6 @@ form {
   margin-bottom: 1.6rem;
   padding: 1.2rem;
 }
-
 .form-split-bill {
   grid-template-columns: 1fr 12rem;
   padding: 3.2rem 4rem;
@@ -157,7 +161,7 @@ form .button {
 }
 
 form h2 {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
   font-size: 2.2rem;
   text-transform: uppercase;
   letter-spacing: -0.5px;
